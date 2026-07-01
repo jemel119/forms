@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exercise 1: Multi-Select Debug Form</title>
+</head>
+<body>
+<h1>Sign Up (Fixed Multi-Select)</h1>
+<form action="debug-form-handler.php" method="post">
+  <label>Your Name: <input name="visitor_name" type="text"></label><br>
+  <label>Password: <input name="password" type="password"></label><br>
+
+  <!-- Fix: name must end with [] so PHP collects every selected value into an array -->
+  <label>Optional features:</label><br>
+  <select name="options[]" size="6" multiple>
+    <option>Chat</option>
+    <option>Email</option>
+    <option>File transfer</option>
+    <option>Directory</option>
+    <option>Shell</option>
+    <option>Remote control</option>
+  </select><br>
+
+  <button type="submit">Sign Up</button>
+</form>
+</body>
+</html>
